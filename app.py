@@ -30,6 +30,19 @@ tfidf=pickle.load(open('vectorizer.pkl','rb'))
 model=pickle.load(open('model.pkl','rb'))
 st.title("SPAM Classifier")
 st.markdown("<style>h1{color: red;}</style>", unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: gray;
+    }
+    h1 {
+        color: red;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 input_sms=st.text_area("Enter the message")
 if st.button('Predict'):
 
