@@ -28,7 +28,8 @@ def transform_text(text):
     return " ".join(y)
 tfidf=pickle.load(open('vectorizer.pkl','rb'))
 model=pickle.load(open('model.pkl','rb'))
-st.title("Email/SMS classifier")
+st.title("SPAM Classifier")
+st.markdown("<style>h1{color: red;}</style>", unsafe_allow_html=True)
 input_sms=st.text_area("Enter the message")
 if st.button('Predict'):
 
